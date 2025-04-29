@@ -266,10 +266,10 @@ function createPictureBlockElement(pictureInfo: Picture): HTMLDivElement {
   );
 
   const picture = document.createElement("picture");
-
   let source = document.createElement("source");
-  source.setAttribute("media", `(min-width: 576px)`);
-  source.setAttribute("srcset", pictureInfo.imageSources["576px"]);
+
+  source.setAttribute("media", `(min-width: 1440px)`);
+  source.setAttribute("srcset", pictureInfo.imageSources["1440px"]);
   picture.appendChild(source);
 
   source = document.createElement("source");
@@ -278,8 +278,8 @@ function createPictureBlockElement(pictureInfo: Picture): HTMLDivElement {
   picture.appendChild(source);
 
   source = document.createElement("source");
-  source.setAttribute("media", `(min-width: 1440px)`);
-  source.setAttribute("srcset", pictureInfo.imageSources["1440px"]);
+  source.setAttribute("media", `(min-width: 576px)`);
+  source.setAttribute("srcset", pictureInfo.imageSources["576px"]);
   picture.appendChild(source);
 
   const img = document.createElement("img");

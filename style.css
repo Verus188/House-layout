@@ -29,7 +29,7 @@ body {
   overflow: hidden;
 }
 
-.header {
+.mainHeader {
   width: 100%;
   /* height: 130px; */
 }
@@ -63,6 +63,7 @@ body {
 }
 
 .header__menu {
+  padding: 0 0;
   position: fixed;
   left: -100%;
   top: 130px;
@@ -104,15 +105,11 @@ body {
   margin: 0 var(--containers-margin);
   margin-top: 60px;
   display: flex;
+  gap: 30px;
 }
-
-/* .main__description {
-
-} */
 
 .main__description-picture {
   display: none;
-  transform: scaleX(-1);
 }
 
 .main__description-header {
@@ -266,17 +263,18 @@ body {
 
   padding: 20px 20px;
 
-  min-width: 290px;
-  min-height: 514px;
   width: 100%;
   height: 100%;
 
   background-color: var(--secondary-background-color);
 }
 
-/* .reproductions__picture-block-content {
+.reproductions__picture-block-content {
   margin: 0 0;
-} */
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
 
 .reproductions__author-name {
   margin: 0 0;
@@ -292,7 +290,7 @@ body {
 
 .reproductions__picture-name {
   margin: 0 0;
-  margin-top: 15px;
+  margin-top: 10px;
 
   font-family: Raleway;
   font-weight: 500;
@@ -304,7 +302,8 @@ body {
 
 .reproductions__picture-description {
   margin: 0 0;
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 
   font-family: Raleway;
   font-weight: 500;
@@ -316,7 +315,7 @@ body {
 
 .reproductions__picture-price {
   margin: 0 0;
-  margin-top: 30px;
+  margin-top: auto;
 
   font-family: Raleway;
   font-weight: 500;
@@ -328,13 +327,13 @@ body {
 
 .reproductions__buy-button {
   margin: 0 0;
-  margin-top: 15px;
+  padding: 0 0;
+  margin-top: 10px;
 
   align-items: center;
   vertical-align: middle;
 
   width: 100%;
-  min-width: 250px;
   min-height: 50px;
 
   font-family: Raleway;
@@ -346,16 +345,21 @@ body {
 }
 
 .new-collection {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
+
   margin: 0 0;
   margin-top: 60px;
   padding: 0 var(--containers-margin);
   padding-top: 50px;
+  padding-bottom: 50px;
 
   min-width: 320px;
   height: 552px;
 
-  background-image: url("resources\\french_background.jpg");
+  background-image: url("resources\\House\\french-background-mobile.jpg");
+  background-size: cover;
 }
 
 .new-collection__header-container {
@@ -392,7 +396,7 @@ body {
 
 .new-collection__button {
   margin: 0 0;
-  margin-top: 30px;
+  margin-top: auto;
 
   width: 100%;
   height: 50px;
@@ -490,6 +494,14 @@ body {
   background-color: var(--secondary-background-color);
 }
 
+.footer__logo_and_phone {
+  display: none;
+}
+
+.footer__logo_and_phone > section {
+  width: auto;
+}
+
 .footer__links {
   margin: 0 0;
   margin-top: 20px;
@@ -504,10 +516,16 @@ body {
   margin: 0 0;
   width: 100%;
 
-  display: grid;
-  grid-template-rows: repeat(auto-fill, auto);
+  /* display: grid;
+  grid-template-rows: repeat(auto-fill, auto); */
+  display: flex;
+  flex-direction: column;
 
   gap: 6px;
+}
+
+.hiden-mobile-element {
+  display: block;
 }
 
 .footer__link-name {
@@ -546,6 +564,10 @@ body {
   margin-top: 20px;
 }
 
+.available768 {
+  display: none;
+}
+
 .footer__platforms-icons {
   display: flex;
   gap: 10px;
@@ -579,22 +601,25 @@ body {
     width: auto;
     height: auto;
   }
+
+  [class*="header__options-menu"] {
+    padding: 0 var(--containers-margin);
+  }
+
   [class*="header__list"] {
+    padding: 0 0;
     display: flex;
     margin-top: 0;
     gap: 60px;
   }
+
   [class*="header__list"] li {
     margin-top: 0;
   }
   [class*="header__logo"] {
     background-color: var(--secondary-background-color);
   }
-  [class*="main__description"] {
-    /* display: flex;
-    flex-wrap: wrap;
-    width: 285px; */
-  }
+
   [class*="main__description-header"] {
     font-family: Raleway;
     font-weight: 500;
@@ -604,8 +629,9 @@ body {
   }
   [class*="main__description-picture"] {
     display: block;
-    width: 195px;
-    height: 239px;
+  }
+  [class*="main__description-picture"] * {
+    height: auto;
   }
   [class*="main__description-paragraph"] {
     margin-top: 10px;
@@ -629,13 +655,117 @@ body {
     gap: 30px;
   }
 
-  [class*="reproductions__picture-block"] {
-    /* min-width: 240px;
-    min-height: 514px; */
+  [class*="reproductions__picture-block-content"] {
+    /* width: 200px; */
+    width: auto;
+    height: auto;
   }
 
-  [class*="reproductions__buy-button"] {
-    min-width: 80px;
-    min-height: 50px;
+  [class*="new_collection"] {
+    background-image: "resources\\House\\french-background-tablet.jpg";
   }
+
+  [class*="new-collection__button"] {
+    max-width: 190px;
+    max-height: 50px;
+  }
+
+  [class*="footer__logo_and_phone"] {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  [class*="footer__links"] {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  [class*="hiden-mobile-element"] {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --containers-margin: 39px;
+  }
+
+  [class*="mainHeader"] {
+    display: flex;
+    width: auto;
+    padding: 0 var(--containers-margin);
+    background-color: var(--secondary-background-color);
+  }
+
+  [class*="header__burger-menu"] {
+    display: none;
+  }
+
+  [class*="header__logo"] {
+    width: auto;
+    padding: 0 0;
+  }
+
+  [class*="header__options-menu"] {
+    width: 100%;
+    padding: 0 0;
+    justify-content: end;
+    gap: 60px;
+  }
+
+  [class*="header__menu"] {
+    padding: 0 0;
+  }
+
+  [class*="header__list"] {
+    padding: 0 0;
+  }
+
+  [class*="header__link"] {
+    padding: 0 0;
+  }
+
+  [class*="main__description-container"] {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  [class*="main__description-picture"] * {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  [class*="new-collection__button"] {
+    max-width: 210px;
+    max-height: 50px;
+  }
+
+  [class*="our-comand__header"] {
+    margin-top: 40px;
+  }
+
+  [class*="footer__line"] {
+    display: none;
+  }
+
+  [class*="footer__links"] {
+    justify-content: space-between;
+
+    flex: auto;
+  }
+
+  [class*="footer__platforms"] {
+    margin-left: auto;
+  }
+
+  [class*="footer__links-and-platforms"] {
+    display: flex;
+    gap: 75px;
+  }
+
+  /* [class*="footer__links-block"] {
+    width: 25px;
+  } */
 }
