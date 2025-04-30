@@ -476,7 +476,7 @@ body {
   width: 100%;
 
   display: flex;
-  justify-content: space-around;
+  gap: 30px;
 }
 
 .our-comand__avatar > img {
@@ -765,7 +765,98 @@ body {
     gap: 75px;
   }
 
-  /* [class*="footer__links-block"] {
-    width: 25px;
+  [class*="reproductions__country-options"] * {
+    margin: 0 0;
+  }
+
+  [class*="reproductions__header-and-options"] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --containers-margin: 165px;
+  }
+
+  [class*="mainHeader"] {
+    padding: 0 165px;
+  }
+
+  [class*="new_collection"] {
+    background-image: "resources\\House\\french-background-desktop.jpg";
+  }
+
+  [class*="new-collection__button"] {
+    max-width: 257px;
+    max-height: 65px;
+  }
+
+  [class*="our-comand"] {
+    display: flex;
+    gap: 30px;
+  }
+
+  [class*="our-comand__hand-picture"] {
+    width: 100%;
+    height: auto;
+  }
+
+  [class*="our-comand__description"] {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .footer {
+    padding: 23px var(--containers-margin);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__logo_and_phone {
+    display: block;
+    height: 100%;
+  }
+
+  .footer__links-and-platforms {
+    flex: none;
+  }
+
+  /* .hiden-mobile-element {
+    display: none;
+  }
+
+  .footer__line {
+    display: none;
+  }
+
+  .footer__logo_and_phone {
+    padding: 0 0;
+    flex-direction: column;
+  }
+
+  #footer__links-block {
+  }
+
+  .footer__platforms {
+    margin: 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer__platforms-icons {
+    flex-direction: row;
+  }
+
+  .footer__links-and-platforms {
+    display: flex;
+    justify-content: center;
+    width: auto;
   } */
 }
